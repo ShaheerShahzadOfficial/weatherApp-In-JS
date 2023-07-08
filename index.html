@@ -8,20 +8,28 @@
 </head>
 <body>
 
-<input type="text" id="inputEle" placeholder="Enter Location">
-<br>
-<br>
-<input id="btn" type="submit" onclick="getWeather()">
-<br>
+    <div class="card">
+        <div class="search">
+            <input id="inputEle" type="text" placeholder="enter city name" 
+            spellcheck="false">
+            <button onclick="getWeather()" id="btn">Search</button>
+        </div>
+        <!-- <div class="error">
+            <p>Invalid city name</p>
+        </div> -->
+
 <p id="error"></p>
-<br>
-    <img  id="img" >
 
-    <p id="temp"></p>
+<div style="display: none;" id="container">
+    <img  id="img">
 
-    <p id="area"></p>
-    <p id="country"></p>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <p id="temp" class="text"></p>
+
+    <span id="area" class="text"></span> <span>-</span>
+    <span id="country" class="text"></span>
+</div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="app.js"></script>
 
 </body>

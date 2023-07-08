@@ -6,7 +6,7 @@ const errorPara = document.getElementById("error")
 
 const img = document.getElementById("img")
 const inputField = document.getElementById("inputEle")
-
+const dataContainer = document.getElementById("container")
 const getWeather = async () =>{
     const ApiKey = "97c24bc20b924a309f345035230707"
     const baseUrl = `http://api.weatherapi.com/v1/current.json?key=${ApiKey}&q=${inputField?.value?.toLowerCase()}&aqi=yes`
@@ -19,17 +19,19 @@ const data = result?.data
     temp.innerHTML = `${data?.current?.temp_c} °C`
     img.src = `${data?.current?.condition?.icon}`
     img.alt = `${data?.current?.condition?.text}`
+    dataContainer.style.display = "block";
+    errorPara.style.display = "none";
     errorPara.innerHTML = ""
 }).catch(function(error){
     console.log(error?.response?.data)
     if (error?.response?.data?.error?.message) {
         errorPara.innerHTML = error?.response?.data?.error?.message
+        dataContainer.style.display = "none";
+        errorPara.style.display = "block";
     }
 
    });
-setTimeout(() => {
-    errorPara.innerHTML = ""
-}, 3000);
+
 }
 
 // getWeather()
