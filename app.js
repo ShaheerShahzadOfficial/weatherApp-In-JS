@@ -9,7 +9,7 @@ const inputField = document.getElementById("inputEle")
 const dataContainer = document.getElementById("container")
 const getWeather = async () =>{
     const ApiKey = "97c24bc20b924a309f345035230707"
-    const baseUrl = `http://api.weatherapi.com/v1/current.json?key=${ApiKey}&q=${inputField?.value?.toLowerCase()}&aqi=yes`
+    const baseUrl = `https://api.weatherapi.com/v1/current.json?key=${ApiKey}&q=${inputField?.value?.toLowerCase()}&aqi=yes`
     // Rapid Api
   await axios.get(baseUrl).then((result) => {
     console.log(result?.data)

@@ -21,7 +21,10 @@
 
 .search {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    width:100%;
+    background-color: white;
+    border-radius: 20px;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
@@ -33,8 +36,9 @@
     padding: 10px;
     font-weight: 700;
     outline: 0px solid white;
-    border: 2px solid rgba(245, 222, 179, 0);
+    border: 2px solid rgba(255, 255, 254, 0);
     box-sizing: border-box;
+    border-radius: 20px;
 
 }
 
@@ -42,11 +46,11 @@
     background-color: #ff006a;
     color: white;
     border: 2px solid rgba(255, 255, 255, 0);
-    padding: 8px;
+    padding: 4px;
     min-width: 50px;
-    font-size: medium;
+    font-size: small;
     box-sizing: border-box;
-
+    border-radius: 20px;
 }
 
 .text {
